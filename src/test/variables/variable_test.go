@@ -1,7 +1,6 @@
-package main
+package variables
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -10,6 +9,6 @@ var (
 )
 
 func TestVariable(t *testing.T) {
-	fmt.Println(i)
+	// fmt.Println(i)
 	t.Log(i)
 }
