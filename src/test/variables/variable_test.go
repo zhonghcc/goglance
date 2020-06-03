@@ -9,6 +9,10 @@ var (
 )
 
 func TestVariable(t *testing.T) {
-	// fmt.Println(i)
+	t.Log(i)
+	i++
+}
+
+func TestVariable2(t *testing.T) {
 	t.Log(i)
 }
