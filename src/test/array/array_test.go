@@ -29,3 +29,10 @@ func TestSub(t *testing.T) {
 	// t.Log(a[0:-1])
 
 }
+
+func TestTranverse(t *testing.T) {
+	a := [...]int{1, 2, 3}
+	for item := range a {
+		t.Log(item)
+	}
+}
