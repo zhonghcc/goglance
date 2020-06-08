@@ -2,7 +2,7 @@ package array
 
 import "testing"
 
-func TestInit(t *testing.T) {
+func TestArrayInit(t *testing.T) {
 	a := [...]int{1, 2, 3}
 	b := [3]int{}
 	t.Log(a)
