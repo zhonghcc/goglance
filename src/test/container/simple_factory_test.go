@@ -33,7 +33,7 @@ func weekday() {
 
 func doFunc(m map[Days]func(), day Days) {
 	if value, exist := m[day]; exist == false {
-		fmt.Errorf("not exist key %d", day)
+		fmt.Printf("not exist key %d", day)
 	} else {
 		value()
 	}
