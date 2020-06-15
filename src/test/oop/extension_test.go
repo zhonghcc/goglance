@@ -34,16 +34,17 @@ func TestExtension(t *testing.T) {
 }
 
 type DogWithParent struct {
-	parent *Pet
+	*Pet
 }
 
 func (this *DogWithParent) speak() {
-	this.parent.speak()
+	this.Pet.speak()
 }
 
 func TestExtensionParent(t *testing.T) {
 	var dog *DogWithParent = new(DogWithParent)
 	dog.speak()
+	// t.Log(dog.getColor()) 因为没有分配内存，所以这个用法是不行的
 }
 
 type DogWithStruct struct {
