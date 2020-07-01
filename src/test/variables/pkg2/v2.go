@@ -1,3 +1,3 @@
 package pkg2
 
-var pkg2Int int = 1
+var Pkg2Int int = 1

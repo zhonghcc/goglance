@@ -1,10 +1,12 @@
 package pkg1
 
 import (
-	v2 "../pkg2"
+	"fmt"
+	v2 "goglance/src/test/variables/pkg2"
 )
 
-func add(){
+func Add() {
 
-	fmt.Println(v2.pkg2Int++)
+	fmt.Println(v2.Pkg2Int)
+	v2.Pkg2Int = v2.Pkg2Int + 1
 }
