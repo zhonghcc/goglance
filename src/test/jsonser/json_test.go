@@ -6,13 +6,24 @@ import (
 )
 
 type User struct {
-	Name string `json:"name"`
-	Age  int    `json:"age"`
+	Name    string    `json:"name"`
+	Age     int       `json:"age"`
+	Address []Address `json:"address"`
+}
+
+type Address struct {
+	Name   string `json:"name"`
+	Detail string `json:"detail"`
 }
 
 func TestSerJson(t *testing.T) {
 	user := new(User)
-	user.Name = "王biang"
+	user.Name = "王你好"
+	user.Age = 18
+	var address Address
+	address.Name = "家庭住址"
+	address.Detail = "家庭住址"
+	user.Address = append(user.Address, address)
 	t.Logf("%+v", user)
 	b, e := json.Marshal(user)
 	if e == nil {
